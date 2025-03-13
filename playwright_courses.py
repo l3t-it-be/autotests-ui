@@ -29,38 +29,38 @@ with sync_playwright() as playwright:
     )
     registration_button.click()
 
-    dashboard_page_header = page.get_by_test_id('dashboard-toolbar-title-text')
-    expect(dashboard_page_header).to_be_visible()
-    expect(dashboard_page_header).to_have_text('Dashboard')
+    dashboard_page_title = page.get_by_test_id('dashboard-toolbar-title-text')
+    expect(dashboard_page_title).to_be_visible()
+    expect(dashboard_page_title).to_have_text('Dashboard')
 
-    context.storage_state(path='for_courses_page.json')
+    context.storage_state(path='browser-state.json')
 
 with sync_playwright() as playwright:
     browser = playwright.chromium.launch(headless=False)
-    context = browser.new_context(storage_state='for_courses_page.json')
+    context = browser.new_context(storage_state='browser-state.json')
     page = context.new_page()
 
     page.goto(
         'https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/courses'
     )
 
-    courses_page_header = page.get_by_test_id(
-        'courses-list-toolbar-title-text'
+    courses_page_title = page.get_by_test_id('courses-list-toolbar-title-text')
+    expect(courses_page_title).to_be_visible()
+    expect(courses_page_title).to_have_text('Courses')
+
+    empty_view_icon = page.get_by_test_id('courses-list-empty-view-icon')
+    expect(empty_view_icon).to_be_visible()
+
+    empty_view_title = page.get_by_test_id(
+        'courses-list-empty-view-title-text'
     )
-    expect(courses_page_header).to_be_visible()
-    expect(courses_page_header).to_have_text('Courses')
+    expect(empty_view_title).to_be_visible()
+    expect(empty_view_title).to_have_text('There is no results')
 
-    courses_icon = page.get_by_test_id('courses-list-empty-view-icon')
-    expect(courses_icon).to_be_visible()
-
-    courses_list = page.get_by_test_id('courses-list-empty-view-title-text')
-    expect(courses_list).to_be_visible()
-    expect(courses_list).to_have_text('There is no results')
-
-    courses_description = page.get_by_test_id(
+    empty_view_description = page.get_by_test_id(
         'courses-list-empty-view-description-text'
     )
-    expect(courses_description).to_be_visible()
-    expect(courses_description).to_have_text(
+    expect(empty_view_description).to_be_visible()
+    expect(empty_view_description).to_have_text(
         'Results from the load test pipeline will be displayed here'
     )

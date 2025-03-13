@@ -29,9 +29,9 @@ with sync_playwright() as playwright:
     )
     registration_button.click()
 
-    dashboard_page_header = page.get_by_test_id('dashboard-toolbar-title-text')
-    expect(dashboard_page_header).to_be_visible()
-    expect(dashboard_page_header).to_have_text('Dashboard')
+    dashboard_page_title = page.get_by_test_id('dashboard-toolbar-title-text')
+    expect(dashboard_page_title).to_be_visible()
+    expect(dashboard_page_title).to_have_text('Dashboard')
 
     context.storage_state(path='browser-state.json')
 
@@ -44,6 +44,6 @@ with sync_playwright() as playwright:
         'https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/dashboard'
     )
 
-    dashboard_header = page.get_by_test_id('dashboard-toolbar-title-text')
-    expect(dashboard_header).to_be_visible()
-    expect(dashboard_header).to_have_text('Dashboard')
+    dashboard_page_title = page.get_by_test_id('dashboard-toolbar-title-text')
+    expect(dashboard_page_title).to_be_visible()
+    expect(dashboard_page_title).to_have_text('Dashboard')
