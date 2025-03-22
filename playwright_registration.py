@@ -1,3 +1,5 @@
+import os
+
 from playwright.sync_api import sync_playwright, expect
 
 with sync_playwright() as playwright:
@@ -33,11 +35,12 @@ with sync_playwright() as playwright:
     expect(dashboard_page_title).to_be_visible()
     expect(dashboard_page_title).to_have_text('Dashboard')
 
-    context.storage_state(path='browser-state.json')
+    storage_state_path = os.path.abspath('../browser-state.json')
+    context.storage_state(path=storage_state_path)
 
 with sync_playwright() as playwright:
     browser = playwright.chromium.launch(headless=False)
-    context = browser.new_context(storage_state='browser-state.json')
+    context = browser.new_context(storage_state=storage_state_path)
     page = context.new_page()
 
     page.goto(
