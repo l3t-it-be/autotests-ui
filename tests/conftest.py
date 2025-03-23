@@ -53,7 +53,7 @@ def initialize_browser_state(playwright: Playwright):
 
 
 @pytest.fixture()
-def chromium_page_with_state(playwright: Playwright):
+def chromium_page_with_state(playwright: Playwright, initialize_browser_state):
     browser = playwright.chromium.launch(headless=False)
     context = browser.new_context(storage_state=storage_state_path)
     page = context.new_page()
