@@ -1,8 +1,8 @@
 import os
-from typing import Any, Generator
+from typing import Generator, Any
 
 import pytest
-from playwright.sync_api import Page, Playwright, expect
+from playwright.sync_api import Playwright, Page, expect
 
 storage_state_path = os.path.abspath('../browser-state.json')
 
