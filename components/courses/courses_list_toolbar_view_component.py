@@ -17,7 +17,6 @@ class CoursesListToolbarViewComponent(BaseComponent):
         self.create_course_button = Button(
             page, 'Create course', 'courses-list-toolbar-create-course-button'
         )
-        self.url = re.compile('.*/#/courses/create')
 
     def check_visible(self):
         self.title.check_visible()
@@ -27,4 +26,4 @@ class CoursesListToolbarViewComponent(BaseComponent):
 
     def click_create_course_button(self):
         self.create_course_button.click()
-        self.check_current_url(self.url)
+        self.check_current_url(re.compile('.*/#/courses/create'))

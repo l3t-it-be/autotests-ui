@@ -9,7 +9,7 @@ class CreateCourseExercisesToolbarViewComponent(BaseComponent):
     def __init__(self, page: Page):
         super().__init__(page)
 
-        self.exercises_title = Text(
+        self.title = Text(
             page,
             'Exercises title',
             'create-course-exercises-box-toolbar-title-text',
@@ -21,8 +21,8 @@ class CreateCourseExercisesToolbarViewComponent(BaseComponent):
         )
 
     def check_visible(self):
-        self.exercises_title.check_visible()
-        self.exercises_title.check_have_text('Exercises')
+        self.title.check_visible()
+        self.title.check_have_text('Exercises')
 
         self.create_exercise_button.check_visible()
 
