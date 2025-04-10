@@ -1,4 +1,7 @@
+from re import Pattern
+
 from playwright.async_api import Page
+from playwright.sync_api import expect
 
 
 class BasePage:
@@ -10,3 +13,6 @@ class BasePage:
 
     def reload(self):
         self.page.reload(wait_until='domcontentloaded')
+
+    def check_current_url(self, expected_url: Pattern[str]):
+        expect(self.page).to_have_url(expected_url)

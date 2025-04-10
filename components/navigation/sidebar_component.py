@@ -1,3 +1,5 @@
+import re
+
 from playwright.sync_api import Page
 
 from components.base_component import BaseComponent
@@ -20,10 +22,10 @@ class SidebarComponent(BaseComponent):
         self.dashboard_list_item.check_visible('Dashboard')
 
     def click_logout(self):
-        self.logout_list_item.navigate()
+        self.logout_list_item.navigate(re.compile('.*/#/auth/login'))
 
     def click_courses(self):
-        self.courses_list_item.navigate()
+        self.courses_list_item.navigate(re.compile('.*/#/courses'))
 
     def click_dashboard(self):
-        self.dashboard_list_item.navigate()
+        self.dashboard_list_item.navigate(re.compile('.*/#/dashboard'))
