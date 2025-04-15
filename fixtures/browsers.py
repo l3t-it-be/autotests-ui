@@ -2,19 +2,23 @@ import os
 from typing import Generator, Any
 
 import pytest
+from _pytest.fixtures import SubRequest
 from playwright.sync_api import Playwright, Page
 
 from pages.authentication.registration_page import RegistrationPage
 from pages.dashboard.dashboard_page import DashboardPage
+from tools.playwright.pages import initialize_playwright_page
 
-storage_state_path = os.path.abspath('../browser-state.json')
+storage_state_path = os.path.abspath('./browser-state.json')
 
 
 @pytest.fixture
-def chromium_page(playwright: Playwright) -> Generator[Page, Any, None]:
-    browser = playwright.chromium.launch(headless=False)
-    yield browser.new_page()
-    browser.close()
+def chromium_page(
+    request: SubRequest, playwright: Playwright
+) -> Generator[Page, Any, None]:
+    yield from initialize_playwright_page(
+        playwright, test_name=request.node.name
+    )
 
 
 @pytest.fixture(scope='session')
@@ -41,10 +45,11 @@ def initialize_browser_state(playwright: Playwright):
 
 
 @pytest.fixture()
-def chromium_page_with_state(playwright: Playwright, initialize_browser_state):
-    browser = playwright.chromium.launch(headless=False)
-    context = browser.new_context(storage_state=storage_state_path)
-    page = context.new_page()
-
-    yield page
-    browser.close()
+def chromium_page_with_state(
+    initialize_browser_state, request: SubRequest, playwright: Playwright
+):
+    yield from initialize_playwright_page(
+        playwright,
+        test_name=request.node.name,
+        storage_state=storage_state_path,
+    )
