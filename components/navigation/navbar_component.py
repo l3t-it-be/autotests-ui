@@ -18,9 +18,7 @@ class NavbarComponent(BaseComponent):
             'navigation-navbar-welcome-title-text',
         )
 
-    @allure.step(
-        'Check visible navbar app title, welcome text and username "{username}"'
-    )
+    @allure.step('Check visible navbar')
     def check_visible(self, username: str):
         self.app_title.check_visible()
         self.app_title.check_have_text('UI Course')

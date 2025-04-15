@@ -19,7 +19,7 @@ class CreateCourseToolbarComponent(BaseComponent):
             page, 'Create course', 'create-course-toolbar-create-course-button'
         )
 
-    @allure.step('Check visible create course title and create course button')
+    @allure.step('Check visible create course toolbar')
     def check_visible(self, is_create_course_disabled=True):
         self.create_course_title.check_visible()
         self.create_course_title.check_have_text('Create course')
