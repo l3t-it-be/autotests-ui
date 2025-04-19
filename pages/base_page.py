@@ -1,4 +1,4 @@
-import enum
+from re import Pattern
 
 import allure
 from playwright.async_api import Page
@@ -17,6 +17,8 @@ class BasePage:
         with allure.step(f'Reloading page with url "{self.page.url}"'):
             self.page.reload(wait_until='domcontentloaded')
 
-    def check_current_url(self, expected_url: enum):
-        with allure.step(f'Checking that current url matches enum url'):
+    def check_current_url(self, expected_url: Pattern[str]):
+        with allure.step(
+            f'Checking that current url matches pattern "{expected_url.pattern}"'
+        ):
             expect(self.page).to_have_url(expected_url)
