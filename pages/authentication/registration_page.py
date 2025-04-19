@@ -1,5 +1,3 @@
-import re
-
 from playwright.sync_api import Page
 
 from components.authentication.registration_form_component import (
@@ -8,6 +6,7 @@ from components.authentication.registration_form_component import (
 from elements.button import Button
 from elements.link import Link
 from pages.base_page import BasePage
+from tools.roots import AppRoute
 
 
 class RegistrationPage(BasePage):
@@ -25,4 +24,4 @@ class RegistrationPage(BasePage):
 
     def click_registration_button(self):
         self.registration_button.click()
-        self.check_current_url(re.compile('.*/#/dashboard'))
+        self.check_current_url(AppRoute.DASHBOARD)
