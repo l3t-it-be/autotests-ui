@@ -6,9 +6,9 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Browser(str, Enum):
-    WEBKIT = 'webkit'
-    FIREFOX = 'firefox'
     CHROMIUM = 'chromium'
+    FIREFOX = 'firefox'
+    WEBKIT = 'webkit'
 
 
 class TestUser(BaseModel):
