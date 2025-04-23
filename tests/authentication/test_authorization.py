@@ -62,6 +62,7 @@ class TestAuthorization:
         'empty_email_and_invalid_password': ('  ', 'password'),
     }
 
+    @pytest.mark.xdist_group(name='authorization-group')
     @pytest.mark.parametrize(
         'email, password', credentials.values(), ids=credentials.keys()
     )
