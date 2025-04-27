@@ -100,7 +100,7 @@ To run the tests and generate an Allure report, use the following command:
 pytest -m 'regression' --alluredir=./allure-results
 ```
 
-This will execute all tests in the project marked "regression" and display the results in the terminal.
+This will execute all tests marked "regression" in the project and display the results in the terminal.
 
 ### 📊 View the Allure Report
 
