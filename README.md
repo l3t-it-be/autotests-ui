@@ -47,8 +47,8 @@ for organizing test code with clear, maintainable scripts.
 ### 📥 Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/l3t-it-be/autotests-ui.git
+cd autotests-ui
 ```
 
 ### 🐍 Create a Virtual Environment
