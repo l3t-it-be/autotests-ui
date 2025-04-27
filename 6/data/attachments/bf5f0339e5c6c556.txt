@@ -1,0 +1,49 @@
+INFO     BASE_PAGE:base_page.py:20 Opening the url "AppRoute.COURSES_LIST"
+INFO     BASE_ELEMENT:base_element.py:26 Getting locator with "data-testid=navigation-navbar-app-title-text" at index "0"
+INFO     BASE_ELEMENT:base_element.py:56 Checking that text "Navbar app title" is visible
+INFO     BASE_ELEMENT:base_element.py:26 Getting locator with "data-testid=navigation-navbar-app-title-text" at index "0"
+INFO     BASE_ELEMENT:base_element.py:66 Checking that text "Navbar app title" has text "UI Course"
+INFO     BASE_ELEMENT:base_element.py:26 Getting locator with "data-testid=navigation-navbar-welcome-title-text" at index "0"
+INFO     BASE_ELEMENT:base_element.py:56 Checking that text "Navbar welcome title" is visible
+INFO     BASE_ELEMENT:base_element.py:26 Getting locator with "data-testid=navigation-navbar-welcome-title-text" at index "0"
+INFO     BASE_ELEMENT:base_element.py:66 Checking that text "Navbar welcome title" has text "Welcome, username!"
+INFO     BASE_ELEMENT:base_element.py:26 Getting locator with "data-testid=logout-drawer-list-item-icon" at index "0"
+INFO     BASE_ELEMENT:base_element.py:56 Checking that icon "Sidebar item" is visible
+INFO     BASE_ELEMENT:base_element.py:26 Getting locator with "data-testid=logout-drawer-list-item-title-text" at index "0"
+INFO     BASE_ELEMENT:base_element.py:56 Checking that text "Sidebar item title" is visible
+INFO     BASE_ELEMENT:base_element.py:26 Getting locator with "data-testid=logout-drawer-list-item-title-text" at index "0"
+INFO     BASE_ELEMENT:base_element.py:66 Checking that text "Sidebar item title" has text "Logout"
+INFO     BASE_ELEMENT:base_element.py:26 Getting locator with "data-testid=logout-drawer-list-item-button" at index "0"
+INFO     BASE_ELEMENT:base_element.py:56 Checking that button "Sidebar item title" is visible
+INFO     BASE_ELEMENT:base_element.py:26 Getting locator with "data-testid=courses-drawer-list-item-icon" at index "0"
+INFO     BASE_ELEMENT:base_element.py:56 Checking that icon "Sidebar item" is visible
+INFO     BASE_ELEMENT:base_element.py:26 Getting locator with "data-testid=courses-drawer-list-item-title-text" at index "0"
+INFO     BASE_ELEMENT:base_element.py:56 Checking that text "Sidebar item title" is visible
+INFO     BASE_ELEMENT:base_element.py:26 Getting locator with "data-testid=courses-drawer-list-item-title-text" at index "0"
+INFO     BASE_ELEMENT:base_element.py:66 Checking that text "Sidebar item title" has text "Courses"
+INFO     BASE_ELEMENT:base_element.py:26 Getting locator with "data-testid=courses-drawer-list-item-button" at index "0"
+INFO     BASE_ELEMENT:base_element.py:56 Checking that button "Sidebar item title" is visible
+INFO     BASE_ELEMENT:base_element.py:26 Getting locator with "data-testid=dashboard-drawer-list-item-icon" at index "0"
+INFO     BASE_ELEMENT:base_element.py:56 Checking that icon "Sidebar item" is visible
+INFO     BASE_ELEMENT:base_element.py:26 Getting locator with "data-testid=dashboard-drawer-list-item-title-text" at index "0"
+INFO     BASE_ELEMENT:base_element.py:56 Checking that text "Sidebar item title" is visible
+INFO     BASE_ELEMENT:base_element.py:26 Getting locator with "data-testid=dashboard-drawer-list-item-title-text" at index "0"
+INFO     BASE_ELEMENT:base_element.py:66 Checking that text "Sidebar item title" has text "Dashboard"
+INFO     BASE_ELEMENT:base_element.py:26 Getting locator with "data-testid=dashboard-drawer-list-item-button" at index "0"
+INFO     BASE_ELEMENT:base_element.py:56 Checking that button "Sidebar item title" is visible
+INFO     BASE_ELEMENT:base_element.py:26 Getting locator with "data-testid=courses-list-toolbar-title-text" at index "0"
+INFO     BASE_ELEMENT:base_element.py:56 Checking that text "Courses toolbar title" is visible
+INFO     BASE_ELEMENT:base_element.py:26 Getting locator with "data-testid=courses-list-toolbar-title-text" at index "0"
+INFO     BASE_ELEMENT:base_element.py:66 Checking that text "Courses toolbar title" has text "Courses"
+INFO     BASE_ELEMENT:base_element.py:26 Getting locator with "data-testid=courses-list-toolbar-create-course-button" at index "0"
+INFO     BASE_ELEMENT:base_element.py:56 Checking that button "Create course" is visible
+INFO     BASE_ELEMENT:base_element.py:26 Getting locator with "data-testid=courses-list-empty-view-icon" at index "0"
+INFO     BASE_ELEMENT:base_element.py:56 Checking that icon "Empty view" is visible
+INFO     BASE_ELEMENT:base_element.py:26 Getting locator with "data-testid=courses-list-empty-view-title-text" at index "0"
+INFO     BASE_ELEMENT:base_element.py:56 Checking that text "Empty view title" is visible
+INFO     BASE_ELEMENT:base_element.py:26 Getting locator with "data-testid=courses-list-empty-view-title-text" at index "0"
+INFO     BASE_ELEMENT:base_element.py:66 Checking that text "Empty view title" has text "There is no results"
+INFO     BASE_ELEMENT:base_element.py:26 Getting locator with "data-testid=courses-list-empty-view-description-text" at index "0"
+INFO     BASE_ELEMENT:base_element.py:56 Checking that text "Empty view description" is visible
+INFO     BASE_ELEMENT:base_element.py:26 Getting locator with "data-testid=courses-list-empty-view-description-text" at index "0"
+INFO     BASE_ELEMENT:base_element.py:66 Checking that text "Empty view description" has text "Results from the load test pipeline will be displayed here"
