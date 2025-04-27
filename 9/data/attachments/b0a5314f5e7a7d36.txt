@@ -1,0 +1,23 @@
+INFO     BASE_PAGE:base_page.py:20 Opening the url "AppRoute.LOGIN"
+INFO     BASE_ELEMENT:base_element.py:26 Getting locator with "data-testid=login-form-email-input" at index "0"
+INFO     BASE_ELEMENT:base_element.py:56 Checking that input "Login email" is visible
+INFO     BASE_ELEMENT:base_element.py:26 Getting locator with "data-testid=login-form-email-input" at index "0"
+INFO     INPUT:input.py:27 Fill input "Login email" with value "user.name@gmail.com"
+INFO     BASE_ELEMENT:base_element.py:26 Getting locator with "data-testid=login-form-password-input" at index "0"
+INFO     BASE_ELEMENT:base_element.py:56 Checking that input "Login password" is visible
+INFO     BASE_ELEMENT:base_element.py:26 Getting locator with "data-testid=login-form-password-input" at index "0"
+INFO     INPUT:input.py:27 Fill input "Login password" with value "password"
+INFO     BASE_ELEMENT:base_element.py:26 Getting locator with "data-testid=login-form-email-input" at index "0"
+INFO     BASE_ELEMENT:base_element.py:56 Checking that input "Login email" is visible
+INFO     BASE_ELEMENT:base_element.py:26 Getting locator with "data-testid=login-form-email-input" at index "0"
+INFO     INPUT:input.py:39 Checking that input "Login email" has value "user.name@gmail.com"
+INFO     BASE_ELEMENT:base_element.py:26 Getting locator with "data-testid=login-form-password-input" at index "0"
+INFO     BASE_ELEMENT:base_element.py:56 Checking that input "Login password" is visible
+INFO     BASE_ELEMENT:base_element.py:26 Getting locator with "data-testid=login-form-password-input" at index "0"
+INFO     INPUT:input.py:39 Checking that input "Login password" has value "password"
+INFO     BASE_ELEMENT:base_element.py:26 Getting locator with "data-testid=login-page-login-button" at index "0"
+INFO     BASE_ELEMENT:base_element.py:46 Clicking button "Login"
+INFO     BASE_ELEMENT:base_element.py:26 Getting locator with "data-testid=login-page-wrong-email-or-password-alert" at index "0"
+INFO     BASE_ELEMENT:base_element.py:56 Checking that text "Wrong email or password alert" is visible
+INFO     BASE_ELEMENT:base_element.py:26 Getting locator with "data-testid=login-page-wrong-email-or-password-alert" at index "0"
+INFO     BASE_ELEMENT:base_element.py:66 Checking that text "Wrong email or password alert" has text "Wrong email or password"
