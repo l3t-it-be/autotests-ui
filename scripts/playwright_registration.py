@@ -35,7 +35,7 @@ with sync_playwright() as playwright:
     expect(dashboard_page_title).to_be_visible()
     expect(dashboard_page_title).to_have_text('Dashboard')
 
-    storage_state_path = os.path.abspath('../browser-state.json')
+    storage_state_path = os.path.abspath('../../browser-state.json')
     context.storage_state(path=storage_state_path)
 
 with sync_playwright() as playwright:
