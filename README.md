@@ -53,8 +53,8 @@ cd your-repo-name
 
 ### 🐍 Create a Virtual Environment
 
-It's recommended to use a virtual environment to manage project dependencies. 
-Follow the instructions for your operating system:
+It is recommended to use a virtual environment to manage project dependencies. 
+Please follow the instructions for your operating system:
 
 #### Linux / MacOS
 
@@ -104,9 +104,11 @@ This will execute all tests in the project marked "regression" and display the r
 
 ### 📊 View the Allure Report
 
-To run the tests and generate an Allure report, use the following command:
+After the tests have been executed, you can generate and view the Allure report with:
 
 ```bash
-pytest -m 'regression' --alluredir=./allure-results
+allure serve ./allure-results
 ```
+
+This command will open the Allure report in your default web browser.
 
